@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}NoTV{% endblock %}
+{% block content %}
+<div class="container-fluid">
+  {% for source in sources %}
+  <div class="source">
+    <h2>{{source.name}}</h2>
+
+    <div class="row">
+      {% for update in source.updates %}
+        <div class="col-md-2">
+          <div class="cell">
+            <a href="/visit/{{update.id}}">
+              <div class="thumb" style="background-image:url('{{update.pic}}')">
+              </div>
+              <span class="title">{{update.title}}</span>
+              <span class="author">from {{update.up.name}}</span>  
+            </a>
+          </div>
+        </div>
+
+        {% if forloop.counter|divisibleby:6 %}
+          </div>
+          <div class="row">
+        {% endif %}
+
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

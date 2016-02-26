@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Update{% endblock %}
+{% block content %}
+    <h1>Update</h1>
+    <h2>New Ups</h2>
+    <ul>
+        {% for u in newUps %}
+        <li>{{u.name}}</li>
+        {% endfor %}
+    </ul>
+    <h2>New Videos</h2>
+    <ul>
+        {% for v in newVideos %}
+        <li>{{v.title}} from {{v.up.name}}</li>
+        {% endfor %}
+    </ul>
+{% endblock}

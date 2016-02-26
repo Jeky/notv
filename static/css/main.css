@@ -1,0 +1,56 @@
+body{
+    background-color: #000;
+    color: #E5DFC5;
+}
+
+a, a:hover, a:focus{
+    color: #91C7A9;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: #A92F41;
+}
+
+
+.cell{
+    background-color: #252120;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-filter: contrast(80%);
+    -webkit-transition: -webkit-filter 0.3s
+    filter: contrast(80%);
+    transition: -webkit-filter 0.3s
+}
+
+.cell:hover{
+    -webkit-filter: contrast(120%);
+    filter: contrast(120%);
+}
+
+.cell .thumb{
+    width: 100%;
+    height: 180px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.cell .title{
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+}
+
+.cell .author{
+    display: block;
+    text-align: center;
+}
+
+.source .row{
+    margin-top: 20px;
+}
+
+.source .row:nth-child(2){
+    margin-top: 0px;
+}
