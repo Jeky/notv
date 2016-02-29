@@ -16,11 +16,14 @@ class Command(BaseCommand):
         parser.add_argument('sources', nargs='*')
 
     def handle(self, *args, **options):
+        print('Starting Fetch New Updates')
         read = options['read']
         if 'sources' in options:
             sources = [ALL_SOUCES[r] for r in options['sources']]
-        else:
+        if len(sources) == 0:
             sources = [bilibili, vm]
+
+        print('From ' + ','.join([s.name for s in sources]))
 
 
         for r in sources:
